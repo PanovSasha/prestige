@@ -1,0 +1,138 @@
+@import 'descriptions';
+
+.home-header {
+  border-bottom: 1px solid @border-color-dark-back;
+  background-color: @blue-dark;
+  color: @white;
+  position: relative;
+  overflow: hidden;
+  height: 1035px;
+  padding-block: @offset112 @offset40;
+
+  @media @tablet {
+    height: auto;
+    padding-top: 128px;
+  }
+
+  @media @s-tablet {
+    padding-top: @offset80;
+  }
+
+  &::after {
+    background-color: @blue;
+    content: '';
+    filter: blur(350px);
+    opacity: 0.7;
+    pointer-events: none;
+    overflow: hidden;
+    position: absolute;
+    right: -200px;
+    top: -187px;
+    animation: bg-blur 1s linear forwards;
+    width: 938px;
+    height: 750px;
+
+    @media @tablet {
+      filter: blur(170px);
+      left: 410px;
+      top: -135px;
+      width: 457.74px;
+      height: 366px;
+    }
+
+    @media @s-tablet {
+      top: -127px;
+      right: 47px;
+      width: 324px;
+      height: 285px;
+    }
+  }
+
+  &__bg {
+    .offsetX(calc(-50% - 128px));
+    position: absolute;
+    left: 50%;
+    pointer-events: none;
+    bottom: 14px;
+    max-width: 1180px;
+
+    @media @l-tablet {
+      transform: none;
+      left: 80px;
+      width: ~'calc(100% - 80px - @{desktop-padding})';
+    }
+
+    @media @tablet {
+      top: 273px;
+      left: @mobile-padding;
+      bottom: auto;
+      max-width: 607px;
+    }
+
+    @media @s-tablet {
+      top: 158px;
+      left: 16px;
+      bottom: auto;
+      width: auto;
+      max-width: 290px;
+    }
+  }
+
+  &__title,
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: @offset72;
+
+    @media @l-tablet {
+      font-size: 80px;
+      line-height: 76px;
+    }
+
+    @media @tablet {
+      font-size: 64px;
+      line-height: 60px;
+      margin-bottom: 220px;
+    }
+
+    @media @s-tablet {
+      .new-title();
+      letter-spacing: -0.04em;
+      margin-bottom: 194px;
+    }
+  }
+
+  &__blue-text {
+    color: @blue;
+    display: block;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: @offset48;
+    max-width: 738px;
+    padding-right: @offset48;
+    margin-left: auto;
+
+    @media @only-desktop {
+      .l-text();
+      letter-spacing: -0.02em;
+    }
+
+    @media @tablet {
+      .base-text();
+      gap: @offset24;
+      max-width: 464px;
+      padding-right: 0;
+      margin-left: initial;
+    }
+
+    @media @s-tablet {
+      .caption-text();
+    }
+  }
+}

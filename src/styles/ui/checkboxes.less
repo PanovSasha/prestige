@@ -1,0 +1,65 @@
+@import 'descriptions';
+
+.checkbox {
+  &__field {
+    .hidden-field();
+  }
+
+  &__text {
+    font-size: @s-font-size;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-left: @offset44;
+
+    @media @tablet {
+      padding-left: @offset36;
+    }
+
+    .checkbox__field:disabled + & {
+      cursor: not-allowed;
+
+      @media @only-tablet {
+        &:hover::before {
+          border-color: @gray-90;
+        }
+      }
+    }
+
+    &::before {
+      .absY-alignment();
+      .square(28);
+      .radius(2);
+      .transition(border-color);
+      .transition(background);
+      content: '';
+      border: 2px solid @gray-90;
+      left: 0;
+      background: no-repeat url('/assets/img/common/checkmark.svg') ~'50% / 1px';
+
+      @media @tablet {
+        .square(20);
+      }
+
+      @media @only-tablet {
+        .checkbox__text:hover & {
+          border-color: @dark;
+        }
+      }
+
+      .checkbox__field:not(:disabled):checked + & {
+        background-color: @blue;
+        border-color: @blue;
+      }
+
+      .checkbox__field:checked + & {
+        background-size: 20px auto;
+      }
+
+      .checkbox__field:disabled + & {
+        background-color: @gray-90;
+      }
+    }
+  }
+}

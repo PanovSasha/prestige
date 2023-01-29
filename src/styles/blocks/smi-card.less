@@ -1,0 +1,67 @@
+@import 'descriptions';
+
+.smi-card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+
+  &__img-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 65.2%;
+    margin-bottom: @offset16;
+
+    @media @tablet {
+      margin-bottom: @offset12;
+    }
+  }
+
+  &__img {
+    .transition(scale);
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+
+    @media @only-desktop {
+      .smi-card:hover & {
+        scale: 1.03;
+      }
+    }
+
+    @media @tablet {
+      min-height: 227px;
+      width: 100%;
+    }
+
+    @media @s-tablet {
+      min-height: 212px;
+    }
+  }
+
+  &__tag {
+    margin-bottom: @offset40;
+
+    @media @tablet {
+      margin-bottom: @offset24;
+    }
+  }
+
+  &__text {
+    margin-top: @offset16;
+
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  &__date {
+    display: block;
+    margin-top: @offset16;
+
+    @media @tablet {
+      margin-top: @offset12;
+    }
+  }
+}

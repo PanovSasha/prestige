@@ -1,0 +1,42 @@
+@import 'descriptions';
+
+.overlay {
+  background-color: fade(@black, 10%);
+  position: fixed;
+  inset: 0;
+  z-index: @z-index-modal;
+  display: none;
+
+  &.shown {
+    .smooth-show();
+  }
+
+  &__close-button {
+    .opacity-hover();
+    color: @white;
+    font-weight: 600;
+    position: absolute;
+    top: @offset28;
+    right: @desktop-padding;
+
+    @media @tablet {
+      top: @offset16;
+      right: @tablet-padding;
+    }
+
+    @media @s-tablet {
+      right: @mobile-padding;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    display: none;
+
+    &.shown {
+      display: flex;
+    }
+  }
+}

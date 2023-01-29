@@ -1,0 +1,167 @@
+@import 'descriptions';
+
+.daterangepicker {
+  .Raleway();
+  box-shadow: 0 8px 16px -4px rgba(11, 31, 53, 0.08);
+
+  &::before, &::after {
+    display: none;
+  }
+
+  @media @s-tablet {
+    text-align: center;
+    position: fixed;
+    border: none;
+    top: 82px !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .drp-calendar {
+    max-width: initial;
+
+    &.left,
+    &.right {
+      padding: @offset24 @offset16 @offset16;
+    }
+
+    &.left {
+      @media @s-tablet {
+        float: none !important;
+        display: inline-block;
+      }
+    }
+
+    &.right {
+      @media @s-tablet {
+        float: none !important;
+        display: inline-block;
+        position: relative;
+        padding-inline: 0;
+
+        thead tr .next.available {
+          display: table-cell !important;
+        }
+      }
+
+      @media only screen and (max-width: 636px) {
+        .month, .table-condensed tbody, thead tr th {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .calendar-table {
+    th,
+    td {
+      font-size: @font-size;
+      .square(40);
+    }
+
+    th {
+      cursor: default;
+
+      &:not(.month) {
+        color: fade(@text-color, 30%);
+      }
+
+      &:first-letter {
+        text-transform: capitalize;
+      }
+
+      &.available {
+        .transition(background-color);
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          background-color: @blue-light;
+        }
+
+        span {
+          border: none;
+        }
+
+        &.prev,
+        &.next {
+          &:after {
+            .abs-alignment();
+          }
+        }
+
+        &.prev {
+          &:after {
+            .triangle(left, 6, 10);
+          }
+        }
+
+        &.next {
+          &:after {
+            .abs-alignment();
+            .triangle(right, 6, 10);
+          }
+
+          @media only screen and (max-width: 636px) {
+            position: absolute;
+            top: -294px;
+            left: -60px;
+          }
+        }
+      }
+    }
+
+    td {
+      &:hover {
+        background-color: @blue-light;
+      }
+
+      &.active,
+      &.active:hover,
+      &.end-date {
+        background-color: @ultramarine;
+      }
+
+      &.off {
+        pointer-events: none;
+        opacity: 0;
+      }
+    }
+  }
+
+  .drp-buttons {
+    .drp-selected {
+      display: none;
+    }
+
+    .btn {
+      .opacity-hover();
+      .base-text();
+
+      &.applyBtn {
+        color: @ultramarine;
+
+        &:disabled {
+          border-color: transparent;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
+  &.show-calendar {
+    .drp-buttons {
+      @media @s-tablet {
+        position: absolute !important;
+        padding-right: @mobile-padding !important;
+        bottom: 82px !important;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+  }
+}

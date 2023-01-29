@@ -1,0 +1,39 @@
+@import 'descriptions';
+
+.scroller-container {
+  @media @tablet {
+    overflow: hidden;
+    margin: 0 -@tablet-padding;
+    position: relative;
+  }
+
+  @media @s-tablet {
+    margin: 0 -@mobile-padding @offset32;
+  }
+
+  @media @l-mobile {
+    margin-bottom: @offset32;
+  }
+
+  &__scroller {
+    @media @tablet {
+      .scroll-touch(x);
+      padding-bottom: 30px;
+      margin-bottom: -30px;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    @media @tablet {
+      display: inline-flex;
+      min-width: 100%;
+      padding: 0 @tablet-padding;
+    }
+
+    @media @s-tablet {
+      padding: 0 @mobile-padding;
+    }
+  }
+}

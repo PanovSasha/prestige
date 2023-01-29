@@ -1,0 +1,131 @@
+@import 'descriptions';
+
+.footer {
+  background-color: @blue-dark;
+  color: @white;
+  margin-top: @footer-offset;
+
+  @media @tablet {
+    margin-top: @footer-offset-tablet;
+  }
+
+  @media @s-tablet {
+    margin-top: @footer-offset-mobile;
+  }
+
+  &__container {
+    border-bottom: 1px solid @border-color-dark-back;
+    padding-block: 50px 52px;
+
+
+    @media @tablet {
+      padding-block: 22px 42px;
+    }
+
+    @media @s-tablet {
+      padding-block: 15px 38px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: @offset60;
+
+    @media @xl-tablet {
+      align-items: start;
+      position: relative;
+      gap: 0;
+    }
+
+    @media @s-tablet {
+      gap: @offset16;
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    flex: none;
+    width: 60px;
+    height: 32px;
+
+    @media @xl-tablet {
+      width: 76px;
+      height: 40px;
+      margin-right: 110px;
+    }
+
+    @media @s-tablet {
+      width: 60px;
+      height: 32px;
+      margin-bottom: @offset24;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    gap: @offset32;
+
+    @media @xl-tablet {
+      flex-direction: column;
+      gap: @offset8;
+    }
+  }
+
+  &__vacancies {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    gap: @offset8;
+    margin-left: auto;
+
+    @media @xl-tablet {
+      margin-left: @offset56;
+    }
+
+    @media @s-tablet {
+      margin: 18px 0 0;
+    }
+  }
+
+  &__link {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: @offset40;
+  }
+
+  &__vacancies-img {
+    .radius(4);
+    overflow: hidden;
+    max-width: 170px;
+
+    @media @xl-tablet {
+      display: none;
+    }
+  }
+
+  &__icon-arrow {
+    color: @blue;
+  }
+
+  &__copy {
+    opacity: 0.6;
+    line-height: 56px;
+
+    @media @tablet {
+      line-height: 36px;
+      padding-bottom: @offset16;
+    }
+
+    @media @s-tablet {
+      line-height: 20px;
+      padding-top: 18px;
+    }
+  }
+
+  a {
+    .opacity-hover();
+  }
+}

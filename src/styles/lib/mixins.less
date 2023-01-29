@@ -1,0 +1,122 @@
+@import 'descriptions';
+
+.btn-reset() {
+  .Raleway();
+  font-size: @font-size;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  font-weight: normal;
+  color: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  user-select: none;
+  text-decoration: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.square(@num) {
+  width: @num + 0px;
+  height: @num + 0px;
+}
+
+.circle(@num) {
+  .square (@num);
+  border-radius: 100%;
+}
+
+.f-center(@display: flex) {
+  display: @display;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.abs-alignment() {
+  .offset();
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.absX-alignment() {
+  .offsetX();
+  position: absolute;
+  left: 50%;
+}
+
+.absY-alignment() {
+  .offsetY();
+  position: absolute;
+  top: 50%;
+}
+
+.ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hidden-field() {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.scroll-touch(@direction: y) {
+  -webkit-overflow-scrolling: touch;
+
+  & when (@direction = x) {
+    overflow-x: auto;
+  }
+
+  & when (@direction = y) {
+    overflow-y: auto;
+  }
+}
+
+.triangle(@direction, @width, @height, @color: @dark) {
+  content: '';
+  position: absolute;
+  border: solid transparent;
+
+  & when (@direction = top) {
+    border-width: 0 @width / 2 + 0px @height + 0px;
+    border-bottom-color: @color;
+  }
+
+  & when (@direction = right) {
+    border-width: @height / 2 + 0px 0 @height / 2 + 0px @width + 0px;
+    border-left-color: @color;
+  }
+
+  & when (@direction = bottom) {
+    border-width: @height + 0px @width / 2 + 0px 0;
+    border-top-color: @color;
+  }
+
+  & when (@direction = left) {
+    border-width: @height / 2 + 0px @width + 0px @height / 2 + 0px 0;
+    border-right-color: @color;
+  }
+}
+
+.bg-gradient(@background: linear-gradient(270deg, @blue-dark 0%, rgba(1, 6, 41, 0) 95.04%)) {
+  background: @background;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.base-gradient-bg() {
+  background-image: @base-gradient-bg;
+}

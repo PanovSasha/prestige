@@ -1,0 +1,33 @@
+@import 'descriptions';
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: @offset56;
+  font-weight: 600;
+  white-space: nowrap;
+
+  @media @tablet {
+    flex-direction: row;
+    align-items: start;
+    gap: @offset32;
+    margin-right: 26px;
+  }
+
+  @media @s-tablet {
+    flex-direction: column;
+    align-items: start;
+    gap: @offset20;
+    margin-block: @offset96 @offset32;
+  }
+
+  &__item {
+    .opacity-hover();
+    letter-spacing: 0.003em;
+
+    &.active {
+      opacity: 0.6;
+      cursor: default;
+    }
+  }
+}

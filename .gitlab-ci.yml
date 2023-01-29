@@ -1,0 +1,22 @@
+stages:
+  - build
+#  - deploy
+
+
+variables:
+  APPLICATION: "$CI_PROJECT_NAME"
+  VERSION: "$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA"
+  CONFIG_REPO: "https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.synchro.pro/s8-site/config/s8-site-static.git"
+
+# Build jobs
+build:
+  stage: build
+  before_script:
+    - git clone ${CONFIG_REPO} .config
+  script:
+    - sh ./.config/build.sh
+  tags:
+    - s8-site-web
+
+
+

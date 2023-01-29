@@ -1,0 +1,77 @@
+@import 'descriptions';
+
+.home {
+  &__assets {
+    @media @only-tablet {
+      margin-bottom: @offset40;
+    }
+  }
+
+  &__profits {
+    position: relative;
+
+    @media @tablet {
+      margin-bottom: 71px;
+    }
+
+    @media @s-tablet {
+      margin-bottom: @offset40;
+    }
+  }
+
+  &__good-deeds {
+    @media @only-desktop {
+      .good-deed-card:nth-child(4) {
+        display: none;
+      }
+    }
+
+    @media @s-tablet {
+      .good-deed-card:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  &__good-deeds-bg {
+    opacity: 0.05;
+    pointer-events: none;
+    position: absolute;
+    right: @offset40;
+    bottom: -120px;
+    width: 286px;
+    height: 153px;
+
+    @media @tablet {
+      right: @offset24;
+      bottom: -60px;
+      width: 134px;
+      height: 71px;
+    }
+
+    @media @s-tablet {
+      opacity: 0.1;
+      top: -80px;
+      bottom: auto;
+      right: 14px;
+      width: 80px;
+      height: 40px;
+    }
+  }
+
+  &__section {
+    position: relative;
+
+    & + & {
+      margin-top: @offset160;
+
+      @media @tablet {
+        margin-top: @offset80;
+      }
+
+      @media @s-tablet {
+        margin-top: @offset40;
+      }
+    }
+  }
+}
