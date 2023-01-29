@@ -1,2 +1,25 @@
-# prestige
-site for expobuilding company
+# s8
+
+### Prerequisites
+
+- NodeJS
+- NPM
+
+### Installing
+
+```
+npm i
+npm start
+```
+
+or
+
+```
+yarn
+npm start
+```
+
+### Build
+```
+npm run build
+```
