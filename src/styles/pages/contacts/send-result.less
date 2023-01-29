@@ -1,0 +1,19 @@
+@import 'descriptions';
+
+.send-result {
+  &__title {
+    margin-bottom: @offset16;
+
+    &--success {
+      color: @ultramarine;
+    }
+
+    &--error {
+      color: red;
+    }
+  }
+
+  &__text {
+    .m-text();
+  }
+}

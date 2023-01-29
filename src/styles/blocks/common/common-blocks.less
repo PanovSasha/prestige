@@ -1,0 +1,28 @@
+@import 'descriptions';
+
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: @layout-width;
+  padding-inline: @desktop-padding;
+  margin-inline: auto;
+
+  @media @tablet {
+    padding-inline: @tablet-padding;
+  }
+
+  @media @s-tablet {
+    padding-inline: @mobile-padding;
+  }
+}
+
+.dark-blue-container {
+  background-color: @blue-dark;
+  color: @white;
+}
+
+.tablet-block {
+  @media @only-tablet {
+    display: block;
+  }
+}

@@ -1,0 +1,48 @@
+@import 'descriptions';
+
+.input {
+  .Raleway();
+  .transition(border-color);
+  font-size: @m-font-size;
+  border: 0 solid @gray-90;
+  border-bottom-width: 1px;
+  width: 100%;
+  height: @fields-height;
+
+  @media @tablet {
+    font-size: @font-size;
+    height: 44px;
+  }
+
+  @media @s-tablet {
+    font-size: @s-font-size;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: @dark;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: @gray-90;
+    }
+  }
+
+  &::placeholder {
+    color: @text-color;
+  }
+
+  &--textarea {
+    display: block;
+    resize: vertical;
+    height: 100px;
+    padding-top: 10px;
+
+    @media @tablet {
+      height: 92px;
+    }
+  }
+}

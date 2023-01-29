@@ -1,0 +1,22 @@
+@import 'descriptions';
+
+.mobile-menu {
+  .smooth-show();
+  background-color: @blue-dark;
+  color: @white;
+  position: fixed;
+  inset: 0;
+  padding: @mobile-padding;
+
+  &__close-btn {
+    position: absolute;
+    top: @offset16;
+    right: @offset16;
+  }
+
+  &__social {
+    position: absolute;
+    left: @offset16;
+    bottom: @offset16;
+  }
+}

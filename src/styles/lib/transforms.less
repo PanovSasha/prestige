@@ -1,0 +1,63 @@
+@import 'descriptions';
+
+.radius(@r: 0) {
+  border-radius: @r + 0px;
+}
+
+.top-radius(@r: 0) {
+  border-radius: @r + 0px @r + 0px 0 0;
+}
+
+.multiline-ellipsis(@line-count: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line-count;
+  overflow: hidden;
+}
+
+.transition(@prop: all, @duration: .1s, @function: linear, @delay: 0s) {
+  transition+: @arguments;
+}
+
+.offset(@x: -50%, @y: -50%) {
+  transform+_: translate(@x, @y);
+}
+
+.offsetX(@x: -50%) {
+  transform+_: translateX(@x);
+}
+
+.offsetY(@y: -50%) {
+  transform+_: translateY(@y);
+}
+
+.rotate(@angle) {
+  transform+_: rotate(@angle + 0deg);
+}
+
+.scale(@scale) {
+  transform+_: scale(@scale);
+}
+
+.flipX() {
+  .scale(~'-1, 1');
+}
+
+.flipY() {
+  .scale(~'1, -1');
+}
+
+.opacity-hover() {
+  @media @only-desktop {
+    .transition(opacity);
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+.smooth-show(@t: .2s, @display: block, @delay: 0) {
+  animation: smooth-show @t + 0s linear forwards @delay + 0s;
+  display: @display;
+}

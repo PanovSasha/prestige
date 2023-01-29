@@ -1,0 +1,22 @@
+@import 'descriptions';
+
+#name-error,
+#theme-error,
+#comment-error,
+#email-error {
+  position: absolute;
+  display: inline-block;
+  align-self: start;
+  top: 0;
+  left: 0;
+  color: red;
+  z-index: 1;
+
+  @media @tablet {
+    top: -10px;
+  }
+}
+
+input:-internal-autofill-selected {
+  background-color: @white !important;
+}
