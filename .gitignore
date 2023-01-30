@@ -9,6 +9,7 @@ logs
 .out/
 build/
 dist/
+files/
 cache/
 node_modules
 bower_componets
