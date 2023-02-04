@@ -111,13 +111,6 @@ module.exports = {
     hot: isDev,
     historyApiFallback: true,
     inline: true,
-    proxy: {
-      '/bitrix': {
-        target: 'http://s8.mserv.me',
-        secure: false,
-        changeOrigin: true,
-      },
-    },
   },
   devtool: isDev ? 'source-map' : false,
   optimization: optimization(),

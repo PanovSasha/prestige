@@ -1,4 +1,4 @@
-# s8
+# Prestige
 
 ### Prerequisites
 
@@ -20,6 +20,7 @@ npm start
 ```
 
 ### Build
+
 ```
 npm run build
 ```

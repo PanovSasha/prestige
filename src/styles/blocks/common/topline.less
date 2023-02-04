@@ -3,26 +3,25 @@
 .topline {
   .transition(background-color);
   .transition(color);
-  background-color: @white;
+  background-color: fade(@gray-50, 90);
+  color: @white;
   position: fixed;
   top: 0;
   z-index: @z-index-fixed;
   width: 100%;
-  padding-block: @offset24;
+  padding-block: @offset12;
 
   @media @s-tablet {
     padding-block: @offset16;
   }
 
   &--white {
-    //color: @white;
-    color: @dark;
+    color: @white;
     background-color: transparent;
   }
 
   &__logo {
-    width: 76px;
-    height: 40px;
+    max-height: @offset60;
 
     @media @s-tablet {
       width: 60px;

@@ -1,0 +1,19 @@
+@import "descriptions";
+
+.clients {
+  background-color: @white;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: @offset20;
+  }
+
+  &__logo-container {
+    .f-center();
+  }
+
+  &__logo {
+    max-width: 60%;
+  }
+}

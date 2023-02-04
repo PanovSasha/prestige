@@ -5,7 +5,6 @@ import { $BODY, $DOCUMENT, $WINDOW, BODY_LOCK_CLASS } from '../lib/constants';
 
 const MOBILE_MENU_CLASS = 'mobile-menu';
 const LOGO_CLASS = 'js-topline-logo';
-const SOCIAL_CLASS = 'js-social';
 const CLOSE_MENU_BTN_CLASS = 'js-close-menu-btn';
 
 const $TOPLINE_WITH_MOD = $('.js-mod-topline');
@@ -19,6 +18,7 @@ const toggleToplineMod = () => {
 
 export const changeToplineMod = () => {
     if ($TOPLINE_WITH_MOD.length) {
+       console.log('huiii');
         toggleToplineMod();
         $DOCUMENT.on('scroll', throttle(toggleToplineMod, 200));
     }
@@ -38,7 +38,6 @@ const hideMobileMenu = () => {
 
     $(`.${CLOSE_MENU_BTN_CLASS}`).remove();
     $(`.${LOGO_CLASS}`, $MOBILE_MENU).remove();
-    $(`.${SOCIAL_CLASS}`, $MOBILE_MENU).remove();
 };
 
 const showMobileMenu = () => {

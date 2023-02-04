@@ -1,33 +1,42 @@
-//@import 'descriptions';
-//
-//body {
-//  .Raleway();
-//  .base-text();
-//  background-color: @white;
-//  color: @text-color;
-//  letter-spacing: -0.01em;
-//  display: flex;
-//  flex-direction: column;
-//  min-height: 100vh;
-//  -webkit-text-size-adjust: 100%;
-//  -webkit-font-smoothing: antialiased;
-//
-//  @media @tablet {
-//    .caption-text();
-//  }
-//}
-//
-//.main {
-//  flex: 1;
-//  position: relative;
-//}
-//
-//
-//a {
-//  color: inherit;
-//  text-decoration: none;
-//
-//  &[href^='tel:'] {
-//    white-space: nowrap;
-//  }
-//}
+@import 'descriptions';
+
+body {
+  .Raleway();
+  .base-text();
+  background-color: @gray-90;
+  color: @text-color;
+  letter-spacing: -0.01em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+
+  @media @tablet {
+    .caption-text();
+  }
+}
+
+.main {
+  flex: 1;
+  position: relative;
+}
+
+.home-section {
+  padding: @offset80 @offset60;
+  position: relative;
+
+  &__title {
+    max-width: 80%;
+    margin-bottom: @offset40;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &[href^='tel:'] {
+    white-space: nowrap;
+  }
+}

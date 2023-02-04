@@ -5,13 +5,15 @@ import '../styles/styles.less';
 import './lib/icons';
 
 // Plugins
-import { changeToplineMod, mobileMenu, overlays, mainSlider } from './common';
+import { changeToplineMod, mobileMenu, overlays, showWhy, homeMap } from './common';
+
 
 // Common
-mainSlider();
 changeToplineMod();
 mobileMenu();
 overlays();
+showWhy();
+homeMap();
 
 // UI
 
@@ -21,14 +23,4 @@ overlays();
 
 // Contacts
 
-new Swiper('.slider', {
-  // direction: 'vertical',
-  // freeMode: true,
-  speed: 2400,
-  parallax: true,
-  spaceBetween: 18,
-  mousewheel: {
-    enabled: true,
-    sensitivity: 2.4
-  }
-})
+
