@@ -18,7 +18,6 @@ const toggleToplineMod = () => {
 
 export const changeToplineMod = () => {
     if ($TOPLINE_WITH_MOD.length) {
-       console.log('huiii');
         toggleToplineMod();
         $DOCUMENT.on('scroll', throttle(toggleToplineMod, 200));
     }
@@ -56,7 +55,6 @@ const showMobileMenu = () => {
 
     $closeBtn.on('click', () => hideMobileMenu());
 };
-
 export const mobileMenu = () => {
     const $btn = $('.js-mobile-menu-btn');
 

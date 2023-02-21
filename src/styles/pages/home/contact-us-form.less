@@ -1,0 +1,37 @@
+@import "contact-us";
+
+.contact-us-form {
+  margin-bottom: @offset40;
+
+  &__input {
+    .m-text();
+    background-color: @white;
+    display: block;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid @gray-88;
+    padding: @offset4;
+
+    & + & {
+      margin-top: @offset20;
+    }
+
+    &:focus {
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: transparent !important;
+      }
+
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: transparent !important;
+      }
+
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: transparent !important;
+      }
+
+      &:-moz-placeholder { /* Firefox 18- */
+        color: transparent !important;
+      }
+    }
+  }
+}

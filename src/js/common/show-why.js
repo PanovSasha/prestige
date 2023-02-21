@@ -1,12 +1,21 @@
+// import WOW from 'wowjs';
+
+// const WOW = require('wowjs');
+//
+// window.wow = new WOW.WOW({
+//     live: false
+// });
+// window.wow.init();
+
+
+
+
+
 export const showWhy = () => {
 
-  // const $whyBlock = $('.js-why__block');
-  // console.log($whyBlock, '111');
-  //
-  // $(window).scroll(function () {
-  //
-  //   if ($(this).scrollTop() > $whyBlock.offset().top - 20) {
-  //     $whyBlock.addClass('why__block--show');
-  //   }
-  // });
+// new WOW.init();
+
+    // const wow =  WOW;
+
+    // wow.init();
 }

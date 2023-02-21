@@ -1,0 +1,28 @@
+@import "descriptions";
+
+.contact-us {
+  background-color: @white;
+
+  &__bg-image {
+    .absY-alignment();
+    width: 45%;
+    right: 0;
+  }
+
+  &__phone {
+    display: inline-block;
+    margin-bottom: @offset40;
+    color: grey;
+
+    &:hover {
+      color: @gray-50;
+    }
+  }
+
+  &__text {
+    .l-text();
+    color: fade(@gray-50, 76);
+    font-weight: 600;
+    max-width: 70%;
+  }
+}

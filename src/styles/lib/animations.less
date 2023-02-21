@@ -51,3 +51,32 @@
     opacity: 1;
   }
 }
+
+
+@keyframes wake-up {
+  from {
+    background-color: transparent;
+    height: 1px;
+    width: 50px;
+    transform: skewX(-90deg);
+    opacity: 0.1;
+
+  @tablet {
+    width: 25px;
+  };
+  }
+
+  to {
+    background-color: currentColor;
+    width: 25px;
+    height: 50px;
+    transform: skewX(-38deg);
+    opacity: 1;
+
+  @tablet {
+    width: 25px;
+  };
+  }
+}
+
+

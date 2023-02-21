@@ -1,11 +1,12 @@
 // Styles
+import 'animate.css';
 import '../styles/styles.less';
 
 // Icons
 import './lib/icons';
 
 // Plugins
-import { changeToplineMod, mobileMenu, overlays, showWhy, homeMap } from './common';
+import { changeToplineMod, mobileMenu, overlays, showWhy, homeMap} from './common';
 
 
 // Common

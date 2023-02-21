@@ -21,15 +21,55 @@
   }
 
   &__logo {
-    max-height: @offset60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: @offset12;
+    height: @offset80;
 
-    @media @s-tablet {
-      width: 60px;
-      height: 32px;
+    @media @tablet {
+      height: @offset48;
     }
 
     a & {
       .opacity-hover();
+    }
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: end;
+    max-width: 120px;
+  }
+
+  &__logo-stick-one {
+    display: inline-block;
+    color: @logo-gray-dark;
+    animation: wake-up .8s linear forwards;
+    margin-right: 8px;
+  }
+
+  &__logo-stick-two {
+    display: inline-block;
+    color: @logo-gray-light;
+    animation: wake-up .9s linear forwards;
+    margin-right: 8px;
+  }
+
+  &__logo-stick-three {
+    display: inline-block;
+    color: @logo-gray-white;
+    animation: wake-up 1s linear forwards;
+
+  }
+
+  &__logo-sign {
+    max-width: 200px;
+    animation: bounceInLeft 1.8s;
+
+    @media @s-tablet {
+
     }
   }
 

@@ -6,12 +6,17 @@
   position: relative;
 
   &__content {
-    text-shadow: 2px 2px 2px #000;
-    padding-inline: 60px;
+    filter: drop-shadow(1px 1px 1px @black);
   }
 
   &__text {
     max-width: 60%;
+    font-size: 24px;
+    line-height: 28px;
+
+    @media @s-tablet {
+      .base-text();
+    }
 
     & + & {
       margin-top: @offset24

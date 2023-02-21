@@ -3,10 +3,22 @@
 .clients {
   background-color: @white;
 
-  &__grid {
+
+  &__slider {
+    height: 100%;
+  }
+
+  &__slider-wrapper {
+    min-height: 100%;
+  }
+
+  &__slide {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    min-height: 800px;
     row-gap: @offset20;
+    background-color: @white;
   }
 
   &__logo-container {
@@ -15,5 +27,6 @@
 
   &__logo {
     max-width: 60%;
+    max-height: 60%;
   }
 }

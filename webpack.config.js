@@ -127,6 +127,7 @@ module.exports = {
         collapseWhitespace: isProd,
       },
     }),
+
     new HTMLWebpackPlugin({
       filename: 'contacts.html',
       template: './public/contacts.html',
@@ -137,6 +138,20 @@ module.exports = {
     new HTMLWebpackPlugin({
       filename: '404.html',
       template: './public/404.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'gallery.html',
+      template: './public/gallery.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'gallery/drager.html',
+      template: './public/gallery/drager.html',
       minify: {
         collapseWhitespace: isProd,
       },
