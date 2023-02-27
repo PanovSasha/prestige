@@ -1,0 +1,35 @@
+@import "descriptions";
+
+.gallery-thumbs {
+  .absX-alignment();
+  width: 70%;
+  bottom: @offset40;
+  padding: 10px 0;
+  z-index: 2;
+
+  &__wrapper {
+    width: auto;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__slide {
+    object-position: center center;
+    object-fit: cover;
+    max-width: 110px;
+    max-height: 60px;
+    opacity: 0.6;
+    filter: drop-shadow(2px 2px 6px @black);
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
+}
+
+.swiper-slide-thumb-active {
+  opacity: 1;
+}

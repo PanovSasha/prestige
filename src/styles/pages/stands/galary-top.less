@@ -1,0 +1,34 @@
+@import "descriptions";
+
+.gallery-top {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+
+  &__wrapper {
+  }
+
+  &__slide {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    filter: drop-shadow(2px 2px 3px @black);
+    color: @white;
+    top: unset;
+    bottom: 55px;
+  }
+
+  .swiper-button-next {
+    right: 100px;
+  }
+
+  .swiper-button-prev {
+    left: 100px;
+  }
+}

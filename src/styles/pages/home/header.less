@@ -1,18 +1,18 @@
 @import "descriptions";
 
 .header {
-  padding-block: @offset120;
+  padding-block: @offset136;
   color: @white;
   position: relative;
 
   &__content {
-    filter: drop-shadow(1px 1px 1px @black);
+    filter: drop-shadow(2px 2px 1px @black);
   }
 
   &__text {
     max-width: 60%;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 26px;
+    line-height: 32px;
 
     @media @s-tablet {
       .base-text();
@@ -21,8 +21,5 @@
     & + & {
       margin-top: @offset24
     }
-
   }
-
-
 }

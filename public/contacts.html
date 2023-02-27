@@ -5,70 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  
   <!--  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"/>-->
-
+  
   <title>Престиж-Экспо | Контакты</title>
 </head>
 
 <body>
-<div class="topline js-topline">
+<div class="topline topline--white js-topline js-mod-topline">
   <div class="wrap">
     <div class="topline__content">
-      <a href="/">
-        <svg class="topline__logo js-topline-logo">
-          <use xlink:href="/assets/sprite/sprite.svg#logo"></use>
-        </svg>
+      <a href="index.html" class="topline__logo">
+        <div class="topline__logo-container">
+          <div class="topline__logo-stick-one"></div>
+          <div class="topline__logo-stick-two"></div>
+          <div class="topline__logo-stick-three"></div>
+        </div>
+        
+        <img class="topline__logo-sign" src="assets/img/logo-sign.png" alt="">
       </a>
-
+      
       <div class="topline__menu js-mobile-menu">
         <nav class="menu" aria-label="Site menu">
-          <a href="/" class="menu__item">Главная</a>
+          <a href="/" class="menu__item">О Престиже</a>
+          <a href="portfolio.html" class="menu__item">Портфолио</a>
+          <a href="services.html" class="menu__item">Услуги</a>
           <span class="menu__item active">Контакты</span>
         </nav>
       </div>
-
+      
       <button type="button"
-              class="topline__mobile-menu-btn js-mobile-menu-btn"></button>
+              class="topline__mobile-menu-btn js-mobile-menu-btn">
+      </button>
     </div>
   </div>
 </div>
 
-<main class="main">
-  <div class="content-container contacts">
-    <div class="wrap">
-      <h1 class="h1 contacts__title">
-        Контакты
-      </h1>
-    </div>
-
-    <div class="contacts__map">
-      <script
-        async
-        type="text/javascript"
-        charset="utf-8"
-        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A78c0cb05ad175e7aa8a20cdb957e8cc5a74280a75102e17cf333bc364c961d2f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"
-      ></script>
-    </div>
+<header class="header">
+  <div class="wrap">
+    <h1 class="h1 contacts__title">
+      Контакты
+    </h1>
   </div>
+</header>
+
+<main class="main">
+
+  </div>
+  
+  <section class="map">
+    <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5abd8940583662fb30b6ede669523c3ae597859daf6941bd9f912eb2541b76a8&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=no"></script>
+  </section>
 </main>
 
-<!--<footer class="footer dark-blue-container">-->
-<!--  <div class="footer__container">-->
-<!--    <div class="wrap">-->
-<!--      <div class="footer__content">-->
-<!--        <svg class="footer__logo">-->
-<!--          <use xlink:href="/assets/sprite/sprite.svg#logo"></use>-->
-<!--        </svg>-->
-
-<!--        <nav class="footer__contacts" aria-label="Contacts info">-->
-<!--          <a href="tel:+79857440248">+7 985 744-02-48</a>-->
-<!--          <a href="mailto:info@prestige-expo.ru">info@prestige-expo.ru</a>-->
-<!--          <span>Королев, ул. Академика Легостаева, д. 10</span>-->
-<!--        </nav>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</footer>-->
+<footer class="footer dark-container">
+  <div class="footer__container">
+    <div class="wrap">
+      <div class="footer__content">
+        <!--        <img class="footer__logo" src="assets/img/logo.png" alt=""/>-->
+        
+        <nav class="footer__contacts" aria-label="Contacts info">
+          <a href="tel:+79857440248">+7 985 744-02-48</a>
+          <a class="footer__link" href="mailto:info@prestige-expo.ru">info@prestige-expo.ru</a>
+          <span>Королев, ул. Академика Легостаева, д. 10</span>
+        </nav>
+      </div>
+      <a class="footer__author footer__link" href="https://t.me/SashaPanov">create by
+        @panov</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

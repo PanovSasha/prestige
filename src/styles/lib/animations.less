@@ -57,26 +57,49 @@
   from {
     background-color: transparent;
     height: 1px;
-    width: 50px;
     transform: skewX(-90deg);
     opacity: 0.1;
+    width: 15px;
 
-  @tablet {
-    width: 25px;
-  };
+    @media @large-than-default-desktop {
+      width: 40px;
+    }
   }
 
   to {
     background-color: currentColor;
-    width: 25px;
-    height: 50px;
+    width: 15px;
+    height: 30px;
     transform: skewX(-38deg);
     opacity: 1;
-
-  @tablet {
-    width: 25px;
-  };
   }
+}
+
+@keyframes brightness {
+  from {
+    filter: brightness(100%);
+  }
+
+  20% {
+    filter: brightness(90%);
+  }
+
+  40% {
+    filter: brightness(80%);
+  }
+
+  60% {
+    filter: brightness(70%);
+  }
+
+  80% {
+    filter: brightness(60%);
+  }
+
+  to {
+    filter: brightness(50%);
+  }
+
 }
 
 
